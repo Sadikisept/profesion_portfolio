@@ -44,8 +44,24 @@ const contactForm = document.getElementById('contact-form'),
 
     const sendEmail = (e) =>{
      e.preventDefault()   
+
 //serviceID -#for - publickey
-emailjs.sen
-    }
+emailjs.sendForm('service_20e64bn', 'template_8ti25mk', '#contact-form','UrF4UfNnw0iiMSInt')
+       .then(()=>{
+        //show sent message
+        contactMessage.textContent = 'Message sent successfully✔️'
+       
+//Remove message after five seconds
+setTimeout(()=>{
+    contactMessage.textContent = ''
+},5000)
+
+//clear input fields
+contactForm.reset()
+    },()=>{
+        //show error message
+        contactMessage.textContent = 'Message not sent (service error)❌'
+       })
+}
 
     contactForm.addEventListener('submit' , sendEmail)
