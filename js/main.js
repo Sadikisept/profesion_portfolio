@@ -40,13 +40,13 @@ window.addEventListener('scroll', blurHeader)
 
 // ========EMAIL JS================
 const contactForm = document.getElementById('contact-form'),
-    contactMessage = document.getElementById('contact-message')
+      contactMessage = document.getElementById('contact-message')
 
     const sendEmail = (e) =>{
      e.preventDefault()   
 
 //serviceID -#for - publickey
-emailjs.sendForm('service_20e64bn', 'template_8ti25mk', '#contact-form','UrF4UfNnw0iiMSInt')
+emailjs.sendForm('service_aahlqus', 'template_bw0ygda', '#contact-form','UrF4UfNnw0iiMSInt')
        .then(()=>{
         //show sent message
         contactMessage.textContent = 'Message sent successfully✔️'
@@ -58,10 +58,34 @@ setTimeout(()=>{
 
 //clear input fields
 contactForm.reset()
-    },()=>{
+    
+},()=>{
         //show error message
         contactMessage.textContent = 'Message not sent (service error)❌'
        })
 }
 
     contactForm.addEventListener('submit' , sendEmail)
+
+    // ========SHOW SCROLL UP===========
+    const scrollUp = () =>{
+        const scrollUp = document.getElementById('scroll-up')
+        //when the scroll is higher than 350 viewport height, add the show-scroll class to the a tg with the scrollup
+    this.scrollY >= 350 ? scrollUp.classList.add('show-scroll')
+                   : scrollUp.classList.remove('show-scroll')
+    }
+    window.addEventListener('scroll', scrollUp)
+
+    // ========SCROLL SECTIONS ACTIVE LINK=======
+    const sections = document.querySelectorAll('section[id]')
+
+    const scrollActive = () =>{
+        const scrollY = window.pageYoffset
+
+        // sections.forEach(current =>{
+        //     const sectionHeight = current.offsetHeight,
+        //     sectionTop = current.offsetTop - 50,
+        //     sectionId = current.getAttribute('id'),
+        //     sectionsClass = document.querySelector('.nav__menu a href*=' + sectionId + )
+        // })
+    }
