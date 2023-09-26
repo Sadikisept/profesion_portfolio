@@ -82,10 +82,19 @@ contactForm.reset()
     const scrollActive = () =>{
         const scrollY = window.pageYoffset
 
-        // sections.forEach(current =>{
-        //     const sectionHeight = current.offsetHeight,
-        //     sectionTop = current.offsetTop - 50,
-        //     sectionId = current.getAttribute('id'),
-        //     sectionsClass = document.querySelector('.nav__menu a href*=' + sectionId + )
-        // })
+        sections.forEach(current =>{
+            const sectionHeight = current.offsetHeight,
+            sectionTop = current.offsetTop - 58,
+            sectionId = current.getAttribute('id'),
+            sectionsClass = document.querySelector('.nav__menu a [href*=' + sectionId + ']')
+       
+            if(scrolly > sectionTop && scrolly <= sectionHeight){
+                sectionClass.add('active-link')
+            }else{
+                sectionClass.classList.remove('active-link')
+            }
+        })
     }
+    window.addEventListener('scroll', scrollActive)
+
+    
