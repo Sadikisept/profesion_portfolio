@@ -541,7 +541,7 @@ row-gap: 1rem;
 }
 
 .contact__button{
-    justify-content: center;
+    justify-self: center;
     cursor: pointer;
 }
 
