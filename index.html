@@ -93,7 +93,8 @@
                             <i class="ri-behance-line"></i>
                         </a>
 
-                        <a href="https://www.linkedin.com/in/sadiki-sept-4650061a2/" target="blank" class="home__social-link">
+                        <a href="https://www.linkedin.com/in/sadiki-sept-4650061a2/" target="blank"
+                            class="home__social-link">
                             <i class="ri-linkedin-line"></i>
                         </a>
                     </div>
@@ -106,29 +107,29 @@
         </section>
         <!-- ==============About============== -->
         <section class="about section" id="about">
-           <div class="about__container container grid">
-            <div class="about__data">
-                <h3 class="section__subtitle">
-                    My <span>Intro</span>
-                </h3>
+            <div class="about__container container grid">
+                <div class="about__data">
+                    <h3 class="section__subtitle">
+                        My <span>Intro</span>
+                    </h3>
 
-                <h2 class="section__title">
-                    About Me
-                </h2>
+                    <h2 class="section__title">
+                        About Me
+                    </h2>
 
-                <p class="about_description">
-                    Frontend Developer, I create Web pages with
-                    UI/UX interface, I have years of
-                    experience and many clients are happy with the
-                    projects carried out
-                </p>
+                    <p class="about_description">
+                        Frontend Developer, I create Web pages with
+                        UI/UX interface, I have years of
+                        experience and many clients are happy with the
+                        projects carried out
+                    </p>
 
-                <a href="#contact" class="button">Contact Me</a>
-           </div>
-           <div class="about__image">
-            <img src="./images/profile.jpg" class="me__blob">
-           </div>
-           </div>
+                    <a href="#contact" class="button">Contact Me</a>
+                </div>
+                <div class="about__image">
+                    <img src="./images/profile.jpg" class="me__blob">
+                </div>
+            </div>
         </section>
 
         <!--==== SKILLS =====-->
@@ -294,7 +295,7 @@
                 </article>
             </div>
         </section>
-
+        <!--contact paage-->
         <section class="contact section" id="contact">
             <h3 class="section__subtitle">
                 Get In <span>Touch</span>
@@ -303,7 +304,7 @@
                 Contact Me
             </h2>
             <div class="contact__container container grid">
-                <form action="" class="contact__form" id="contact-form">
+                <form action="https://formsubmit.co/sadikisept26@gmail.com" method="POST" class="contact__form" id="contact-form">
                     <div class="contact__group">
                         <input type="text" name="user_name" required placeholder="Enter your name"
                             class="contact__input">
@@ -311,11 +312,10 @@
                             class="contact__input">
                     </div>
 
-                    <textarea name="user_project" required placeholder="Enter your message"
-                        class="contact__input"></textarea>
+                    <textarea name="user_project" required placeholder="Enter your message" class="contact__input"></textarea>
 
                     <p class="contact__message" id="contact-message"></p>
-
+                  <input type="hidden" name="captcha" value="false">
                     <button type="submit" class="button contact__button">
                         Send Message
                     </button>
@@ -363,7 +363,7 @@
     <!-- =============SCROLLREVEAL ===============-->
     <!-- <script src=""></script> -->
     <!-- ===============EMAIL JS ==================-->
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script> -->
     <!-- ==================MAIN JS=================== -->
     <script src="js/main.js"></script>
 </body>
